@@ -1,5 +1,5 @@
 return graphics.newSprite(
-	love.graphics.newImage(graphics.imagePath("perfect")),
+	love.graphics.newImage(graphics.imagePath("Perfect")),
 	-- Automatically generated from perfect.xml
 	{
 		{x = 0, y = 0, width = 1162, height = 394, offsetX = 0, offsetY = 0, offsetWidth = 0, offsetHeight = 0}, -- 1: Perfect0000
