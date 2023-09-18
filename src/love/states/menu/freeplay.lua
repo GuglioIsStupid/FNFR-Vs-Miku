@@ -10,7 +10,7 @@ local camFollow = {x=0, y=0}
 
 local function getInstPath(songName)
     -- lowercase
-    local songName = songName:gsub("^%l", string.upper)
+    local songName = songName:lower()
     return "songs/" .. songName .. "/Inst.ogg"
 end
 
