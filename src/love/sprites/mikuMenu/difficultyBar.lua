@@ -1,5 +1,5 @@
 return graphics.newSprite(
-	love.graphics.newImage(graphics.imagePath("mikuMenu/difficultyBar")),
+	love.graphics.newImage(graphics.imagePath("mikuMenu/difficultybar")),
 	-- Automatically generated from difficultyBar.xml
 	{
 		{x = 0, y = 0, width = 576, height = 116, offsetX = 0, offsetY = 0, offsetWidth = 0, offsetHeight = 0}, -- 1: difficulty slider easy0000
