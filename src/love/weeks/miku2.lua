@@ -76,30 +76,12 @@ return {
 	end,
 
 	update = function(self, dt)
-		perfect:update(dt)
 		weeks:update(dt)
 		stages["concert"]:update(dt)
 
 		weeks:checkSongOver()
 
 		weeks:updateUI(dt)
-
-		if beatHandler.onBeat() then
-            local curBeat = beatHandler.curBeat
-            if song == 1 and curBeat == 245 and misses == 0 then
-                perfect:animate("anim")
-                perfect.visible = true
-			elseif song == 2 and curBeat == 135 and misses == 0 then
-                perfect:animate("anim")
-                perfect.visible = true
-			elseif song == 3 and curBeat == 263 and misses == 0 then
-                perfect:animate("anim")
-                perfect.visible = true
-			elseif song == 4 and curBeat == 389 and misses == 0 then
-                perfect:animate("anim")
-                perfect.visible = true
-            end 
-        end
 	end,
 
 	draw = function(self)
@@ -109,11 +91,6 @@ return {
             love.graphics.scale(camera.ezoom, camera.ezoom)
 
 			stages["concert"]:draw()
-		love.graphics.pop()
-
-		love.graphics.push()
-			love.graphics.translate(graphics.getWidth()/2, graphics.getHeight()/2)
-			perfect:draw()
 		love.graphics.pop()
 
 		weeks:drawUI()

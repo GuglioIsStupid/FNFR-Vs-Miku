@@ -174,11 +174,9 @@ return {
 
 		countdownFade = {}
 		countdown = love.filesystem.load("sprites/countdown.lua")()
-		perfect = love.filesystem.load("sprites/perfect.lua")()
 	end,
 
 	load = function(self)
-		perfect.visible = false
 		botplayY = 0
 		botplayAlpha = {1}
 		paused = false
@@ -406,6 +404,7 @@ return {
 	end,
 
 	generateNotes = function(self, chart, psychweek, song, difficulty)
+		difficulty = "-hard" -- the illusion of freedom
 		local eventBpm
 		local chart = chart
 		if chart == nil and _psychmod then
@@ -1749,5 +1748,7 @@ return {
 		Timer.clear()
 
 		fakeBoyfriend = nil
+
+		storyMode = false
 	end
 }

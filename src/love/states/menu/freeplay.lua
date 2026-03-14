@@ -203,9 +203,15 @@ return {
                     function() 
                         smallRecTwen = Timer.tween(0.2, record, {x=325, alpha = 1}, "in-cubic") 
 
-                        instMusic = love.audio.newSource(getInstPath(songs[curSong].name), "stream")
-                        instMusic:setLooping(true)
-                        instMusic:play()
+                        if songs[curSong] then
+                            instMusic = love.audio.newSource(getInstPath(songs[curSong].name), "stream")
+                            instMusic:setLooping(true)
+                            instMusic:play()
+                        else
+                            if instMusic then
+                                instMusic:stop()
+                            end
+                        end
                     end
                 )
             end)

@@ -109,7 +109,6 @@ return {
 	end,
 
 	update = function(self, dt)
-		perfect:update(dt)
 		weeks:update(dt)
 		if song ~= 3 then
 			stages["expo"]:update(dt)
@@ -131,20 +130,7 @@ return {
 
 		if beatHandler.onBeat() then
             local curBeat = beatHandler.curBeat
-            if song == 1 and curBeat == 566 and misses == 0 then
-                perfect:animate("anim")
-                perfect.visible = true
-			elseif song == 2 and curBeat == 269 and misses == 0 then
-                perfect:animate("anim")
-                perfect.visible = true
-			elseif song == 3 and curBeat == 324 and misses == 0 then
-                perfect:animate("anim")
-                perfect.visible = true
-			elseif song == 4 and curBeat == 245 then
-				perfect:animate("anim")
-                perfect.visible = true
-            end
-			
+
 			if misses == 0 and song == 4 and curBeat == 361 then
 				stageImages.endless.visible = true
 				stageImages.endless:animate("anim", true)
@@ -167,11 +153,6 @@ return {
 			else
 				stages["vocaexpo"]:draw()
 			end
-		love.graphics.pop()
-
-		love.graphics.push()
-			love.graphics.translate(graphics.getWidth()/2, graphics.getHeight()/2)
-			perfect:draw()
 		love.graphics.pop()
 
 		weeks:drawUI()
