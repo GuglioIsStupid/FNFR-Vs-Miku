@@ -87,7 +87,7 @@ switch: lovefile
 	@rm -rf build/switch
 	@mkdir -p build/switch/switch/funkin-vanilla-engine
 
-	@nacptool --create "Friday Night Funkin' Vanilla Engine" "VE Devs" "$(shell cat version.txt)" build/switch/funkin-vanilla-engine.nacp
+	@nacptool --create "Friday Night Funkin' VS Miku" "GuglioIsStupid & OG Creators" "$(shell cat version.txt)" build/switch/funkin-vanilla-engine.nacp
 
 	@mkdir build/switch/romfs
 	@cp build/lovefile/funkin-vanilla-engine.love build/switch/romfs/game.love
